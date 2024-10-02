@@ -35,7 +35,7 @@ async def get_doc(message: types.Message):
 
         if os.path.exists(output_file_path):
             output_file_to_send = FSInputFile(output_file_path)
-
+       
             await bot.send_document(chat_id=message.chat.id, document=output_file_to_send)
         else:
             await message.answer("Не удалось создать файл. Пожалуйста, попробуйте снова.")
